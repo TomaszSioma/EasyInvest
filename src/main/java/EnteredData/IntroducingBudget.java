@@ -15,4 +15,11 @@ public class IntroducingBudget {
         float valueBudget = Float.parseFloat(scanner.nextLine());
         this.modelBudget.ModelBudget(modelBudgetName,valueBudget);
     }
+
+    public void ShowModelBudget (Scanner scanner) {
+        System.out.println("Podaj ");
+        int position = Integer.parseInt(scanner.nextLine());
+        this.modelBudget.ShowModelBudget(position);
+
+    }
 }

@@ -18,21 +18,9 @@ public class ChoiceInstruction {
             if (numberChoice >=1 && numberChoice <=7 && numberChoice != 0) {
                 switch (numberChoice) {
                     case 1:
-                        System.out.println("Wybierz co chcesz zrobić");
-                        System.out.println("\n");
-                        System.out.println("1. Wprowadzenie nowego budżetu");
-                        System.out.println("2. Wyświetlenie nowego budżetu");
-                        System.out.println("0. Wróć wyżej");
-                       secondNumberChoice = Integer.parseInt(scaner.nextLine());
-                       if (secondNumberChoice >= 1 && secondNumberChoice <=2){
-                        switch (secondNumberChoice) {
-                                case 1:
-                                    addIntroducingBudget.CreateModelBudget(scaner);
-                                    break;
-                                case 2:
-                                    break;
-                            }
-                       } else break;
+                        addIntroducingBudget.CreateModelBudget(scaner);
+                        System.out.println("1 działa");
+                        addIntroducingBudget.ShowModelBudget(scaner);
                        break;
                     case 2:
                         System.out.println("2 działa");

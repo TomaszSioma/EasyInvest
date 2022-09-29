@@ -3,7 +3,9 @@ package ServiceClasses;
 import MainClasses.Budget;
 import RepositoryClaeses.ModelBudgetRepository;
 
-public class ModelBudgetService {
+import java.io.IOException;
+
+public class ModelBudgetService extends IOException {
 
 
         private ModelBudgetRepository repository = new ModelBudgetRepository();
@@ -12,4 +14,9 @@ public class ModelBudgetService {
             return this.repository.CreateModelBudget(modelBudgetName, valueBudget);
         }
 
+        public Budget ShowModelBudget(int position) {
+            return this.repository.ShowModelBudget(position);
+        }
+
 }
+
