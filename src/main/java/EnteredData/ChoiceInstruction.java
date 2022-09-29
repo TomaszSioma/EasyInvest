@@ -1,5 +1,6 @@
 package EnteredData;
 
+import java.io.IOException;
 import java.util.BitSet;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ public class ChoiceInstruction {
 
     Scanner scaner = new Scanner(System.in);
 
-    public void ChoiceIntruction()  {
+    public void ChoiceIntruction() throws IOException {
 
         while (!toString(numberChoice).isEmpty()) {
             numberChoice = Integer.parseInt(scaner.nextLine());
@@ -20,7 +21,6 @@ public class ChoiceInstruction {
                     case 1:
                         addIntroducingBudget.CreateModelBudget(scaner);
                         System.out.println("1 działa");
-                        addIntroducingBudget.ShowModelBudget(scaner);
                        break;
                     case 2:
                         System.out.println("2 działa");
@@ -44,6 +44,7 @@ public class ChoiceInstruction {
 
 
             } else if (numberChoice == 0) {
+                this.addIntroducingBudget.saveAll();
                 System.out.println("Koniec programu");
                 break;
             } else if (numberChoice < 0 || numberChoice > 7) {

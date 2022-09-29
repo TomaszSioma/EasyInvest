@@ -1,11 +1,14 @@
 package EnteredData;
 
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class UsersEnteredText {
 
-    public void EnteredText() {
+    ChoiceInstruction choice = new ChoiceInstruction();
+
+    public void EnteredText() throws IOException {
         System.out.println("Aplikacja do prowadzenia budżetu, kontroli wydatków oraz inwestowania!");
         System.out.println("\n");
         System.out.println("Wybierz co chcesz zrobić:");
@@ -20,7 +23,7 @@ public class UsersEnteredText {
 
         Scanner scaner = new Scanner(System.in);
 
-        ChoiceInstruction choice = new ChoiceInstruction();
+
         choice.ChoiceIntruction();
 
 

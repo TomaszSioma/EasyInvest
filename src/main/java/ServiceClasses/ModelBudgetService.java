@@ -18,5 +18,17 @@ public class ModelBudgetService extends IOException {
             return this.repository.ShowModelBudget(position);
         }
 
+        // odczyt danych
+        public void readAll() {
+            try {
+                this.repository.readAll();
+            } catch (IOException e) {
+                System.out.println("Pliku nie znaleziono");
+            }
+        }
+        // Zapis danych
+        public void saveAll() throws IOException {
+            this.repository.saveAll();
+        }
 }
 
